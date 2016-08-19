@@ -28,6 +28,8 @@ def chat(ws, channel):
         else:
             break
 
+    conn.close()
+
 ws.register_blueprint(wschat, url_prefix='/websocket')
 
 @asyncio.coroutine
